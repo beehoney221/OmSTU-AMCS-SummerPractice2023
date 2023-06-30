@@ -4,7 +4,7 @@ public class SquareEquation
 {
     public static double[] Solve(double a, double b, double c)
     {
-        double eps = 1e-5;
+        double eps = 1e-9;
         if (Math.Abs(a) <= eps) throw new System.ArgumentException();
         else if (double.IsNaN(a) | double.IsNaN(b) | double.IsNaN(c)) throw new ArgumentException();
         else if (double.IsPositiveInfinity(a) | double.IsPositiveInfinity(b) | double.IsPositiveInfinity(c)) throw new ArgumentException();
