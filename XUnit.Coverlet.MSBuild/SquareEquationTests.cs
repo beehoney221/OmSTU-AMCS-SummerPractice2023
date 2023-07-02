@@ -6,7 +6,7 @@ namespace Square.UnitTests.Equation
     public class SquareEquationTests
     {
         [Fact]
-        public void Test1()
+        public void Solve_Null()
         {
             bool result = false;
             double[] array = SquareEquation.Solve(1, 0, 9);
@@ -19,7 +19,7 @@ namespace Square.UnitTests.Equation
         }
 
         [Fact]
-        public void Test2()
+        public void Solve_One()
         {
             bool result = false;
             double[] array = SquareEquation.Solve(1, 4, 4);
@@ -33,7 +33,7 @@ namespace Square.UnitTests.Equation
         }
 
         [Fact]
-        public void Test3()
+        public void Solve_TwoB()
         {
             bool result = false;
             double[] array = SquareEquation.Solve(1, 7, -8);
@@ -47,7 +47,7 @@ namespace Square.UnitTests.Equation
         }
 
         [Fact]
-        public void Test4()
+        public void Solve_Two()
         {
             bool result = false;
             double[] array = SquareEquation.Solve(1, 0, -7);
@@ -71,7 +71,7 @@ namespace Square.UnitTests.Equation
         [InlineData(7, double.NegativeInfinity, 83)]
         [InlineData(65, 4.22222, double.NegativeInfinity)]
         [InlineData(0, 2, 37)]
-        public void Test5(double a, double b, double c)
+        public void Solve_Exc(double a, double b, double c)
         {
             Assert.Throws<ArgumentException>(() => SquareEquation.Solve(a, b, c));
         }
