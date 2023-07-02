@@ -25,7 +25,7 @@ namespace Square.UnitTests.Equation
             double[] array = SquareEquation.Solve(1, 4, 4);
             double[] t_a = { -2 };
 
-            if (Math.Abs(array[0] - t_a[0]) < 1e-9 & array.Length == 1)
+            if ((Math.Abs(array[0] - t_a[0]) < 1e-9) & (array.Length == 1))
             {
                 result = true;
             }
@@ -37,9 +37,9 @@ namespace Square.UnitTests.Equation
         {
             bool result = false;
             double[] array = SquareEquation.Solve(1, 7, -8);
-            double[] t_a = { 1, -8 };
+            double[] t_a = { -8, 1 };
 
-            if (Math.Abs(array[0] - t_a[0]) < 1e-9 & Math.Abs(array[1] - t_a[1]) < 1e-9)
+            if ((Math.Abs(array[0] - t_a[0]) < 1e-9) & (Math.Abs(array[1] - t_a[1]) < 1e-9))
             {
                 result = true;
             }
@@ -53,7 +53,7 @@ namespace Square.UnitTests.Equation
             double[] array = SquareEquation.Solve(1, 0, -7);
             double[] t_a = { (-1) * Math.Sqrt(7), Math.Sqrt(7) };
 
-            if (Math.Abs(array[0] - t_a[0]) < 1e-9 & Math.Abs(array[1] - t_a[1]) < 1e-9)
+            if ((Math.Abs(array[0] - t_a[0]) < 1e-9) & (Math.Abs(array[1] - t_a[1]) < 1e-9))
             {
                 result = true;
             }
