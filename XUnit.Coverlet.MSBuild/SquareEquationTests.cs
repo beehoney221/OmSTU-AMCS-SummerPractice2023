@@ -61,7 +61,7 @@ namespace Square.UnitTests.Equation
         }
 
         [Theory]
-        [InlineData(double.NaN, 2, 38)]
+        [InlineData(double.NaN, 2, 37)]
         [InlineData(10, double.NaN, 999.58)]
         [InlineData(1, 55, double.NaN)]
         [InlineData(double.PositiveInfinity, 8, 763)]
