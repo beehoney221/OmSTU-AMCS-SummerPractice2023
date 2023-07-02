@@ -5,7 +5,7 @@ public class SquareEquation
     public static double[] Solve(double a, double b, double c)
     {
         double eps = 1e-9;
-        if (Math.Abs(a) < eps) 
+        if (Math.Abs(a) <= eps) 
         {
             throw new System.ArgumentException();
         }
