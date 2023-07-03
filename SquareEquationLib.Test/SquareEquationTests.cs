@@ -52,7 +52,7 @@ namespace Square.UnitTests.Equation
             bool result = false;
             double[] t_a = { (-1) * Math.Sqrt(7), Math.Sqrt(7) };
             double[] array = SquareEquation.Solve(1, 0, -7);
-
+            
             if ((Math.Abs(array[0] - t_a[0]) < 1e-9) & (Math.Abs(array[1] - t_a[1]) < 1e-9))
             {
                 result = true;
