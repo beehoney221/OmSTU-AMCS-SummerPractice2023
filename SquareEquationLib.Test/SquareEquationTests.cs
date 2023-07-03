@@ -8,56 +8,40 @@ namespace Square.UnitTests.Equation
         [Fact]
         public void Solve_Null()
         {
-            bool result = false;
+            double[] t_a = {  };
             double[] array = SquareEquation.Solve(1, 0, 9);
 
-            if (array.Length == 0)
-            {
-                result = true;
-            }
-            Assert.True(result, "Correctly");
+            Assert.Equal(t_a, array);
         }
 
         [Fact]
         public void Solve_One()
         {
-            bool result = false;
             double[] t_a = { -2 };
             double[] array = SquareEquation.Solve(1, 4, 4);
-            
-            if ((Math.Abs(array[0] - t_a[0]) < 1e-9) & (array.Length == 1))
-            {
-                result = true;
-            }
-            Assert.True(result, "Correctly");
+
+            Assert.Equal(t_a, array);
         }
 
         [Fact]
         public void Solve_TwoB()
         {
-            bool result = false;
             double[] t_a = { -8, 1 };
             double[] array = SquareEquation.Solve(1, 7, -8);
             
-            if ((Math.Abs(array[0] - t_a[0]) < 1e-9) & (Math.Abs(array[1] - t_a[1]) < 1e-9))
-            {
-                result = true;
-            }
-            Assert.True(result, "Correctly");
+            Assert.Equal(t_a, array);
         }
 
         [Fact]
         public void Solve_Two()
         {
-            bool result = false;
             double[] t_a = { (-1) * Math.Sqrt(7), Math.Sqrt(7) };
             double[] array = SquareEquation.Solve(1, 0, -7);
             
-            if ((Math.Abs(array[0] - t_a[0]) < 1e-9) & (Math.Abs(array[1] - t_a[1]) < 1e-9))
+            for (int i = 0; i < t_a.Length; i++)
             {
-                result = true;
+                Assert.Equal(t_a[i], array[i], 10);
             }
-            Assert.True(result, "Correctly");
         }
 
         [Theory]
