@@ -4,7 +4,7 @@ public class SquareEquation
 {
     public static double[] Solve(double a, double b, double c)
     {
-        double eps = 1e-9;
+        double eps = 1e-5;
         if (Math.Abs(a) <= eps) 
         {
             throw new System.ArgumentException();
@@ -27,7 +27,7 @@ public class SquareEquation
             double x1, x2;
             if (d >= eps)
             {
-                if (b != 0) x1 = - (b + Math.Sign(b) * Math.Sqrt(d)) / 2;
+                if (Math.Abs(b) >= eps) x1 = - (b + Math.Sign(b) * Math.Sqrt(d)) / 2;
                 else x1 = - Math.Sqrt(d) / 2;
                 x2 = c / x1;
                 double[] array = { x1, x2 };
