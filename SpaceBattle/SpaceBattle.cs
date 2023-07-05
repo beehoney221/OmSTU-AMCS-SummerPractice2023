@@ -1,8 +1,6 @@
 ﻿namespace SpaceBattle;
 public class SpaceBattle
 {
-    public double[] pos = { double.NaN, double.NaN };
-    public double[] speed = { double.NaN, double.NaN };
     public static double[] Position(double[] pos, double[] speed) 
     {
         if ((pos.Length == 0) | (speed.Length == 0))
